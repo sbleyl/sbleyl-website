@@ -1,0 +1,98 @@
+### CREATE five documents.
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Inside Sales Representative",
+    "company": "SCA Pharma",
+    "location": "Little Rock, AR",
+    "duration": 3,
+    "startDate": "04-22-2024"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Virtual Sales Representative",
+    "company": "GE Healthcare",
+    "location": "Wauwatosa, WI",
+    "duration": 11,
+    "startDate": "05-30-2023",
+    "endDate": "04-20-2023"
+}
+
+### CREATE 3
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Inside Sales Representative",
+    "company": "FujiFilm SonoSite Inc.",
+    "location": "Bothell, WA",
+    "duration": 57,
+    "startDate": "05-14-2018",
+    "endDate": "02-07-2023"
+}
+
+### CREATE 4
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Sales/Marketing Representative",
+    "company": "ATAGO USA Inc.",
+    "location": "Bellevue, WA",
+    "duration": 15,
+    "startDate": "02-14-2017",
+    "endDate": "05-14-2018"
+}
+
+### CREATE 5
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Store Manager",
+    "company": "Blissberri",
+    "location": "Bellevue, WA",
+    "duration": 13,
+    "startDate": "06-01-2015",
+    "endDate": "06-30-2016"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/jobs HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/jobs/64d3b1398146c0d744a4b95b HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/jobs/64d3afbb0816f78a7cedf90a HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Inside Sales Representative",
+    "company": "SCA Pharma",
+    "location": "Little Rock, AR",
+    "duration": 1,
+    "startDate": "04-22-2024"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/jobs/64d3afbb0816f78a7cedf90a HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/jobs HTTP/1.1
+
